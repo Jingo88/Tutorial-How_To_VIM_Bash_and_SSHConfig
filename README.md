@@ -1,11 +1,14 @@
 # Basic VIM Commands / Bash Profile / SSH Configuration
 
-I am putting together this very simple guide to help make things easier because lets face it, nobody wants to type "ssh root@domainname.com" every single time they log into their servers. This readme will cover simple vim commands, how to put environmental variables in your bash profile, and how to configure your ssh config file to hold multiple ip addresses as shortcuts.
+I am putting together this guide to help make things easier because lets face it, nobody wants to type "ssh root@yoursuperlongurl" every single time they log into their servers. This readme will cover some simple vim commands, how to put environmental variables in your bash profile, and how to configure your ssh config file to hold multiple ip addresses as shortcuts.
 
+##### [I. VIM Commands](#vim)
+##### [II. Env Var to Bash](#bash)
+##### [III. SSH Config](#ssh)
 
-### I. Basic VIM Commands
+### <a name=vim>I. Basic VIM Commands</a>
 
-* You can use the vi command to do anything from creating a new html file, to viewing a log file, to editing your bash file. Simply writing "vi" will open the targeted file, and if there isn't any file by that name then you will see a blank screen for the new file you just created. some examples
+* You can use the vi command to do anything from creating a new html file, to viewing a log file, to editing your bash file. Simply writing "vi" will open the targeted file, and if there isn't any file by that name then you will see a blank screen for the new file you just created. Some examples are:
 
 ```
 vi index.html
@@ -23,10 +26,11 @@ vi /etc/hosts
 * :q! - quit override. This will allow you to quit and discard the changes made
 * :wq! - write, quit, override. I just do this shit out of habit
 * /findthis - searching for a word or phrase. Replace "findthis" with the word you want to find and then hit enter. This is case sensitive. Press "n" to go to the next instance of the searched word
+* y - Yank. 
 ```
 
 
-### II. Add Enrivonmental Variables To Your Bash Profile
+### <a name=bash>II. Add Enrivonmental Variables To Your Bash Profile</a>
 
 * vim into your bash file
 
@@ -67,7 +71,7 @@ env | sort
 
 
 
-### III. SSH Configuration
+### <a name=ssh>III. SSH Configuration</a>
 
 * Open your terminal and input the following command
 
