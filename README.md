@@ -8,26 +8,32 @@ I am putting together this guide to help make things easier because lets face it
 
 ### <a name=vim>I. Basic VIM Commands</a>
 
-* You can use the vi command to do anything from creating a new html file, to viewing a log file, to editing your bash file. Simply writing "vi" will open the targeted file, and if there isn't any file by that name then you will see a blank screen for the new file you just created. Some examples are:
+You can use the vi command to do anything from creating a new html file, to viewing a log file, to editing your bash file. Simply writing "vi" will open the targeted file, and if there isn't any file by that name then you will see a blank screen for the new file you just created. Some examples are:
 
-```
-vi index.html
-vi ~/.bashrc
-vi /etc/hosts
-```
 
-* Here are some commands for when you are in vim
+* vi index.html
+* vi ~/.bashrc
+* vi /etc/hosts
 
-```
-* i - insert. Pressing "i" allows you to edit the file
-* esc - escape. Press this to escape "insert" mode
-* :q - quit. This will quit the file, only if no changes were made
-* :wq - write, quit. This will make the changes and quit the file. Cannot be in "insert" mode
-* :q! - quit override. This will allow you to quit and discard the changes made
-* :wq! - write, quit, override. I just do this shit out of habit
+
+Here are some commands for when you vim into a file:
+
+
+* i - Insert. Pressing "i" allows you to edit the file
+* esc - Escape. Press this to escape "insert" mode
+* :q - Quit. This will quit the file, only if no changes were made
+* :wq - Write, Quit. This will make the changes and quit the file. Cannot be in "insert" mode
+* :q! - Quit Override. This will allow you to quit and discard the changes made
+* :wq! - Write, Quit, Override. I just do this shit out of habit
 * /findthis - searching for a word or phrase. Replace "findthis" with the word you want to find and then hit enter. This is case sensitive. Press "n" to go to the next instance of the searched word
-* y - Yank. 
-```
+* y - Yank. Pressing "y" once will copy the link the cursor is on. Pressing "y" again will end your copy for that line. 
+* v - Visual Mode. Instead of copying the whole line with "y" you can enter visual mode to highlight certain text.
+* p - Put. Puts the text you just yanked onto the line where your cursor is
+* Copying and Pasting - simple cmd+c and cmd+v will work as well
+* 0 - Zero. Goes to the beginning of the line you are on
+* "z." - Center. Center's your screen to where your cursor is located
+* u - Undo. Undo changes (just like ctrl+z)
+
 
 
 ### <a name=bash>II. Add Enrivonmental Variables To Your Bash Profile</a>
