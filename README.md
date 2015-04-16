@@ -88,60 +88,41 @@ Example: vi /etc/bashrc
 sudo vi bashrc
 ```
 
-
-
-
-
-
-
-* ls -a | grep bash
-* vi ~/.bash_profile
-* vi ~/.bashrc
-* both are normally hidden files in your home directory
-* find / -name bashrc 2>/dev/null
-* sudo find / -name bashrc 2>/dev/null
-* source .bashrc
-* source .bash_profile
-* 
-
-
-* vim into your bash file
+* Now here is where you get to use your savvy vim skillz (yes with a "z")
+* Press "i" to enter the INSERT mode
+* Go to the last line and enter your Environmental Variables
+* Below are examples of some exported variables and aliases
 
 ```
-vi ~/.bashrc
+export portfolio=/mystuff/aboutme/portfoliopage
+(Now portfolio can be used in the terminal)
+
+cd $portfolio
+(You will jump to the portfolio folder from whatever directory you were previously in)
+
+alias c='clear'
+(You have shorthanded your clear command)
+
+In terminal instead of typing "clear" to clear out all the text you can now just type "c"
 ```
 
-* Add environmental variables to this file
+* LAST STEP!!!
+* After saving the edits in your file and quitting vim (:wq!) please use the following command to make sure you can use your new variables and shortcuts
 
 ```
-export Portfolio_Home=/home/mystuff/portfolio/
-```
-* Make sure you input this after the line that says 
-
-```
-# User specific aliases and functions
+source bashrc
 ```
 
-* Once you exit and log back in the exported variable will take effect
-* Find out if your variable persist
+* Some more useful things
+* To see your current variables
 
 ```
-echo $Portfolio_Home
+echo $portfolio
+(This will return the path of that variable)
 
-should show the path
-
-/home/mystuff/portfolio
-```
-
-* For an organized view of all the environmental variables in your server input the following command
-
-```
 env | sort
+(This will list all of your environmental variables in alphabetical order)
 ```
-
-* This will show you all your variables in alphabetical order
-
-
 
 
 ### <a name=ssh>III. SSH Configuration</a>
