@@ -36,7 +36,25 @@ Here are some commands for when you vim into a file:
 
 
 
-### <a name=bash>II. Add Enrivonmental Variables To Your Bash Profile</a>
+### <a name=bash>II. Bashrc vs. Bash_Profile and Your Environmental Variables.</a>
+
+Alright people, lets get into the nitty gritty as to the differences between your bashrc file and your bash_profile file. What's the difference? They do similar things in the sense that if you export a PATH in either file that path can be used. One main difference is the bash_profile will only run **once** on the login of the first terminal window. If you were to make a new terminal window (cmd+n on mac / Tmux on windows) the variables set in your bash_profile cannot be used in your second window. 
+
+The bashrc file will be run on each instance of a new terminal window so your variables can be used anywhere. Yes it does sound more appealing to use the bashrc over the bash_profile. But when does the bash_profile come in handy? Lets take the example that on the loading of a terminal screen you have a command that runs some lengthy list that you only want once. Instead of having that list show up every time you launch a new terminal window it will show up only in your initial window. 
+
+So what are some other similarities / differences / notes that we can take away from the bashrc and bash_profile. 
+
+
+* ls -a | grep bash
+* vi ~/.bash_profile
+* vi ~/.bashrc
+* both are normally hidden files in your home directory
+* find / -name bashrc 2>/dev/null
+* sudo find / -name bashrc 2>/dev/null
+* source .bashrc
+* source .bash_profile
+* 
+
 
 * vim into your bash file
 
