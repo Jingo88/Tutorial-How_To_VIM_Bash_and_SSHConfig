@@ -54,14 +54,44 @@ So what are some other similarities / differences / notes that we can take away 
 * sudo find / -name bashrc
 (Lets break this down a little more)
 
-	* sudo - gives you temporary root power, you may have to type in your password
+	* sudo - gives you temporary root power, you have to type in your password. We are using this ONLY BECAUSE the files are hidden
 	* find - find or search
 	* / - this is the home directory of your ROOT, not your user
 	* -name - says you are searching by name of the file
 	* bashrc - the name of the file being searched for
+	
+* ls -a | grep bash
+(Lets break this command down now)
 
+	* ls - List Setting - list all the files/folders in your current directory
+	* -a - shows all hidden files
+	* | grep - searches through the list 
+	* bash - any file/folder containing the word bash
 
 ```
+
+Now that we are finished with that super long explaination about how to find your bashrc and bash_profile files lets start editing them. For now we'll stick with going into the bashrc file and adding the environmentail variables there. The process will be the same either way. 
+
+* vim into your bashrc file
+
+```
+vi bashrc
+(This is only if you're in the current directory, if it is in a different directory and you know the directory path use that.)
+
+Example: vi /etc/bashrc
+```
+
+* BUT WAIT IT'S A READ ONLY FILE?!?!?!
+* Yes you cannot edit your bashrc file unless you have root access. Again we need "sudo" access (if you are not in root) 
+
+```
+sudo vi bashrc
+```
+
+
+
+
+
 
 
 * ls -a | grep bash
