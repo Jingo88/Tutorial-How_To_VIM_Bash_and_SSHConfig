@@ -3,7 +3,7 @@
 I am putting together this guide to help make things easier because lets face it, nobody wants to type "ssh root@yoursuperlongurl" every single time they log into their servers. This readme will cover some simple vim commands, how to put environmental variables in your bash profile, and how to configure your ssh config file to hold multiple ip addresses as shortcuts.
 
 ##### [I. VIM Commands](#vim)
-##### [II. Env Var to Bash](#bash)
+##### [II. Bashrc vs. Bash_Profile and Your Environmental Variables](#bash)
 ##### [III. SSH Config](#ssh)
 
 ### <a name=vim>I. Basic VIM Commands</a>
@@ -42,7 +42,26 @@ Alright people, lets get into the nitty gritty as to the differences between you
 
 The bashrc file will be run on each instance of a new terminal window so your variables can be used anywhere. Yes it does sound more appealing to use the bashrc over the bash_profile. But when does the bash_profile come in handy? Lets take the example that on the loading of a terminal screen you have a command that runs some lengthy list that you only want once. Instead of having that list show up every time you launch a new terminal window it will show up only in your initial window. 
 
-So what are some other similarities / differences / notes that we can take away from the bashrc and bash_profile. 
+So what are some other similarities / differences / notes that we can take away from the bashrc and bash_profile:
+
+* Your bashrc and bash_profile are normally hidden and in the same directory (usually your home directory)
+* If you don't know which directory the bash files are in you can use the "find" command
+* Since the files are most likely hidden files, you will need to use "sudo" to give access to locate hidden files
+* If you do know which directory the bash files are in you can use the "ls -a | grep" command
+ 
+
+```
+* sudo find / -name bashrc
+(Lets break this down a little more)
+
+	* sudo - gives you temporary root power, you may have to type in your password
+	* find - find or search
+	* / - this is the home directory of your ROOT, not your user
+	* -name - says you are searching by name of the file
+	* bashrc - the name of the file being searched for
+
+
+```
 
 
 * ls -a | grep bash
